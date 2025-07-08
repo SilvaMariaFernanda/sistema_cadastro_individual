@@ -1,0 +1,252 @@
+/* Variáveis das cores que serão usadas */
+:root {
+    --white: rgb(255, 255, 255);
+
+    --gray_modal_footer: rgb(217, 217, 217);
+    --gray_header: rgba(234, 234, 234, 0.2);
+    --gray_text_1: rgb(61, 61, 61);
+    --gray_text_2: rgb(102, 102, 102);
+    --gray_text_3: rgb(30, 30, 30);
+    --gray_input: rgb(236, 236, 236);
+    --gray_input_border: rgb(186, 186, 186);
+    --gray_placeholder: rgb(182, 182, 182);
+    --gray_modal_background: rgb(209, 209, 209);
+    --gray_box_shadow: rgba(0, 0, 0, 0.25);
+    --gray_header_background: rgb(234, 234, 234);
+    --gray_background: rgb(230, 230, 230);
+    --gray_modal_overlay: rgba(30, 30, 30, 0.5);
+
+    --blue_background: rgb(46, 121, 197);
+    --blue_text: rgb(41, 112, 184);
+
+    --purple_background: rgb(129, 100, 231);
+    --purple_text: rgb(90, 67, 172);
+
+    --red: rgb(180, 5, 5);
+
+    --green: rgb(81, 126, 73);
+}
+
+/* Configurações padrão de todo o site */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: var(--white);
+}
+
+/* Padrão do body */
+body {
+    height: 100%;
+}
+
+/* Padrão título h1 */
+.title_h1,
+h1 {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Padrão de links */
+a {
+    text-decoration: none;
+}
+
+/* Bold para textos */
+.bold {
+    font-weight: 700;
+}
+
+/* Padrão de um botão */
+.buttonPattern {
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+}
+
+/* Padrão de todos os SVGs */
+svg {
+    height: 1.3rem;
+}
+
+/* Padrão do path de todos os SVGs */
+svg path {
+    fill: var(--white);
+}
+
+/* Padrão de um botão */
+button {
+    cursor: pointer;
+}
+
+/* Padrão do main */
+main {
+    width: 100%;
+    padding: 0 3rem;
+}
+
+/* ------------------ Header ------------------ */
+
+/* Padrão do header */
+header {
+    height: 5rem;
+    width: 100%;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px var(--gray_box_shadow);
+}
+
+/* Header com opacidade para quando o background do body for um gradiente  */
+.backgroundOpacityHeader {
+    background-color: var(--gray_header);
+}
+
+/* Fundo degradê azul + roxo */
+.gradientBackground {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(145deg, var(--blue_background) 0%, var(--purple_background) 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* Link para a landing page no header */
+.landingPageLink,
+.summaryLandingPageLink {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    text-decoration: none;
+}
+
+/* SVG do home ícon */
+.landingPageLink svg {
+    height: 1.2rem;
+}
+
+/* Cor do home ícon */
+.landingPageLink svg path {
+    fill: var(--white);
+}
+
+/* Padrão do NAV do header */
+header nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Links dentro do NAV do header */
+header a {
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+/* Hover dos links dentro do header */
+header a:hover {
+    background-color: var(--gray_header);
+}
+
+/* buttonPattern dentro de nav do header */
+header nav #createAccountLink {
+    border: 1px solid var(--white);
+}
+
+/* Menu hamburguer */
+header button {
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+
+/* Titulo/link landing page resumido */
+header .summaryLandingPageLink {
+    display: none;
+}
+
+/* ------------------ Footer ------------------ */
+
+footer{
+    background-color: var(--gray_modal_footer);
+    box-shadow: 0px -2px 5px var(--gray_box_shadow);
+}
+
+/* ------------------ Landing page (index.html) ------------------ */
+
+/* Item centralizado Centralizado */
+.centralizedItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Item com flex direction: column = organizado em colunas */
+.columnItem {
+    flex-direction: column;
+}
+
+/* Main do Index */
+.indexMain {
+    height: 80vh;
+    justify-content: flex-start;
+    padding-top: 7rem;
+    text-align: center;
+    gap: 1rem;
+}
+
+/* H1 do main Index */
+.indexMain h1{
+    font-size: 1.8rem;
+}
+
+/* P do main Index */
+.indexMain p{
+    font-size: 1.2rem;
+    max-width: 45rem;
+}
+
+/* Link redirecionamento para Criar conta */
+.indexMain .buttonPattern{
+    font-weight: 700;    
+    color: var(--purple_background);
+    background-color: var(--white);
+}
+
+@media screen and (max-width: 1000px) {
+
+    /* Navegação do header */
+    header nav {
+        display: none;
+    }
+
+    /* Menu hamburguer */
+    header button {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    /* Link para a landing page no header */
+    .landingPageLink {
+        display: none;
+    }
+
+    /* Titulo/link landing page resumido */
+    header .summaryLandingPageLink {
+        display: inline-flex;
+    }
+}
+
+@media screen and (max-width: 250px) {
+
+    /* Padrão do header, main */
+    header, main {
+        padding: 0 1rem;
+    }
+
+}
