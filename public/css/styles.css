@@ -239,6 +239,7 @@ footer nav {
 /* Agrupamento de nav + form */
 footer>div {
     margin-bottom: 4rem;
+    align-items: center;
 }
 
 /* Form dentro de footer */
