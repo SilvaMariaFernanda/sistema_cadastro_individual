@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar uma conta - Sistema de Cadastro Individual</title>
+
+    <!-- Descrição breve da página -->
+    <meta name="description"
+        content="Crie sua conta no Sistema de Cadastro Individual e tenha acesso a recursos exclusivos. Rápido, seguro e fácil de usar.">
+
+    <!-- Importando a fonte Roboto do Google Fonts para utilizar na estilização do site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Ícone que aparece na guia do navegador (public/images/link_icon.svg) -->
+    <link rel="icon" href="../public/images/link_icon.svg" type="image/x-icon">
+
+    <!-- Conexão com o arquivo CSS (public/css/styles.css) -->
+    <link rel="stylesheet" href="../public/css/styles.css">
+</head>
+
+<body class="gradientBackground">
+
+    <!-- Header com opacidade -->
+    <header class="backgroundOpacityHeader">
+
+        <!-- Agrupamento do nome do site/link para a landing page + ícone home -->
+        <a class="landingPageLink title_h1 buttonPattern" href="index.html" title="Link para a landing page"
+            aria-label="Home - Sistema de Cadastro Individual">
+            Sistema de Cadastro Individual
+
+            <!-- SVG ícone home -->
+            <svg viewBox="0 0 35 39" fill="none">
+                <path
+                    d="M4.375 34.6667H10.9375V21.6667H24.0625V34.6667H30.625V15.1667L17.5 5.41667L4.375 15.1667V34.6667ZM0 39V13L17.5 0L35 13V39H19.6875V26H15.3125V39H0Z" />
+            </svg>
+        </a>
+
+        <!-- Agrupamento do nome do site resumido/link para a landing page + ícone home (aparece quando a tela é menor do que 500px) -->
+        <a class="summaryLandingPageLink title_h1 buttonPattern" href="index.html" title="Link para a landing page"
+            aria-label="Home - Sistema de Cadastro Individual">
+            S.C.I.
+
+            <!-- SVG ícone home -->
+            <svg viewBox="0 0 35 39" fill="none">
+                <path
+                    d="M4.375 34.6667H10.9375V21.6667H24.0625V34.6667H30.625V15.1667L17.5 5.41667L4.375 15.1667V34.6667ZM0 39V13L17.5 0L35 13V39H19.6875V26H15.3125V39H0Z" />
+            </svg>
+        </a>
+
+        <!-- Menu hamburguer (aparece quando a tela é menor do que 1000px) -->
+        <button type="button" aria-label="Menu" title="Abrir menu">
+            <svg viewBox="0 0 32 25" fill="none">
+                <path d="M0 3.9315V0H32V3.9315H0ZM0 25V21.0685H32V25H0ZM0 14.4657V10.5343H32V14.4657H0Z" fill="white" />
+            </svg>
+        </button>
+
+        <!-- Navegação pelo site -->
+        <nav>
+            <!-- Links para navegação do site -->
+            <a class="buttonPattern" href="comoaplicar.html" title="Link para a página 'Como aplicar'">Como aplicar</a>
+            <a class="buttonPattern" href="sobre.html" title="Link para a página 'Sobre'">Sobre</a>
+            <a class="buttonPattern" href="entrar.html" title="Link para a página 'Entrar'">Entrar</a>
+            <a class="buttonPattern" id="createAccountLink" href="criarconta.html"
+                title="Link para a página 'Criar conta'">Criar uma conta</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="modalMain">
+
+        <!-- Seção de convite para criar conta -->
+        <section class="leftSide centralizedItem columnItem">
+
+            <!-- Agrupamento de título mais texto complementar -->
+            <div class="centralizedItem columnItem">
+                <!-- Título da página -->
+                <h1 class="biggestTitle purpleText centeredText">Crie sua conta</h1>
+
+                <!-- Texto complementar -->
+                <p class="centeredText">Bem-vindo(a)! Preencha os dados para se cadastrar e começar a usar todos
+                    recursos disponíveis.</p>
+            </div>
+
+            <!-- Agrupamento de texto e link -->
+            <div class="centralizedItem columnItem">
+
+                <!-- Parágrafro -->
+                <p>Já possui uma conta?</p>
+
+                <!-- Link para a página de cadastro -->
+                <a title="Link para a página 'Entrar'" class="purpleText bold" href="entrar.html">Clique aqui para
+                    entrar</a>
+            </div>
+        </section>
+
+        <!-- Seção de formulário  -->
+        <section class="rightSide centralizedItem columnItem">
+
+            <!-- Formulário de cadastro -->
+            <form action="">
+
+                <!-- Agrupamento de label + input do nome + Mensagem de erro -->
+                <div>
+                    <!-- Agrupamento de label + Input nome  -->
+                    <div>
+                        <!-- Label do campo input do nome -->
+                        <label class="obrigatorio" for="">Nome:</label>
+
+                        <!-- Input de nome -->
+                        <input aria-label="Nome" type="text" name="" id="" placeholder="Nome completo">
+                    </div>
+
+                    <!-- Mensagem de erro -->
+                    <p class="errorMessage">Mensagem de erro</p>
+                </div>
+
+                <!-- Agrupamento de label + input do email + Mensagem de erro -->
+                <div>
+                    <!-- Agrupamento de label + Input email  -->
+                    <div>
+                        <!-- Label do campo input do email -->
+                        <label class="obrigatorio" for="">E-mail:</label>
+
+                        <!-- Input de email -->
+                        <input aria-label="E-mail" type="email" name="" id="" placeholder="emailexemplo@dominio.com">
+                    </div>
+
+                    <!-- Mensagem de erro -->
+                    <p class="errorMessage">Mensagem de erro</p>
+                </div>
+
+                <!-- Agrupamento de label + input do senha + Mensagem de erro -->
+                <div>
+                    <!-- Agrupamento de label + Input senha  -->
+                    <div>
+                        <!-- Label do campo input do senha -->
+                        <label class="obrigatorio" for="">Senha:</label>
+
+                        <!-- Input de senha -->
+                        <input aria-label="Senha" type="password" name="" id="" placeholder="********">
+                    </div>
+
+                    <!-- Mensagem de erro -->
+                    <p class="errorMessage">Mensagem de erro</p>
+
+                    <!-- Parâmetros de senha -->
+                    <div class="passwordParameters">
+                        <!-- Enunciado -->
+                        <p>Sua senha precisa conter:</p>
+
+                        <!-- Parâmetros -->
+                        <ul>
+                            <li>No mínimo 8 caracteres</li>
+                            <li>Pelo menos uma letra MAIÚSCULA</li>
+                            <li>Pelo menos uma letra minúscula</li>
+                            <li>Pelo menos um número</li>
+                            <li>Pelo menos um caractere especial</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Agrupamento de label + input do confirmar senha + Mensagem de erro -->
+                <div>
+                    <!-- Agrupamento de label + Input do confirmar senha  -->
+                    <div>
+                        <!-- Label do campo input do do confirmar senha -->
+                        <label class="obrigatorio" for="">Confirmar senha</label>
+
+                        <!-- Input de do confirmar senha -->
+                        <input aria-label="Confirmar senha" type="password" name="" id="" placeholder="*********">
+                    </div>
+
+                    <!-- Mensagem de erro -->
+                    <p class="errorMessage">Mensagem de erro</p>
+                </div>
+
+                <input title="Confirmar envio do formulário" aria-label="Confirmar envio do formulário" type="submit" value="Confirmar">
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer padrão -->
+    <footer>
+
+        <!-- Agrupamento dos elementos do footer -->
+        <div>
+            <!-- Navegação do site pelo footer -->
+            <nav>
+                <!-- Seção S.C.I. footer -->
+                <div class="footerSection">
+                    <h3 class="bold">S.C.I.</h3>
+                    <ul>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="comoaplicar.html">Como aplicar</a></li>
+                    </ul>
+                </div>
+
+                <!-- Seção Conta footer -->
+                <div class="footerSection">
+                    <h3 class="bold">Conta</h3>
+                    <ul>
+                        <li><a href="entrar.html">Entrar</a></li>
+                        <li><a href="criarconta.html">Criar</a></li>
+                    </ul>
+                </div>
+
+                <!-- Seção Desenvolvimento footer -->
+                <div class="footerSection">
+                    <h3 class="bold">Desenvolvimento</h3>
+                    <ul>
+                        <li><a href="#">Conheça</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Seção Suporte footer -->
+                <div class="footerSection">
+                    <h3 class="bold">Suporte</h3>
+                    <ul>
+                        <li><a href="#">E-mail</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Formulário rápido para falar comigo -->
+            <form action="">
+
+                <!-- Label do input -->
+                <p class="bold">Gostou do meu trabalho?</p>
+                <label for="" class="bold">Envie seu e-mail para que possamos conversar melhor e iniciar uma
+                    parceria.</label>
+
+                <!-- Agrupamento do input email + submit -->
+                <div class="inputContactEmail">
+                    <!-- Input de email -->
+                    <input aria-label="Email para contato" placeholder="E-mail" type="email" name="contactEmail" id="">
+
+                    <!-- Input submit enviar -->
+                    <input title="Enviar seu email" class="bold sendButton" type="submit" value="Enviar">
+
+                    <!-- Input submit versão de ícone (Aparece quando a tela é menor de 700px) -->
+                    <button title="Enviar seu email" class="sendButton" type="submit">
+                        <svg aria-label="Ícone de enviar" class="icon" viewBox="0 0 21 18" fill="none">
+                            <path
+                                d="M0.814453 17.1911V0.808594L20.239 8.99984L0.814453 17.1911ZM2.9997 13.9101L14.6285 8.99984L2.9997 4.0896V7.41009L9.08945 8.99984L2.9997 10.5896V13.9101Z"
+                                fill="black" />
+                        </svg>
+
+                    </button>
+
+                </div>
+            </form>
+        </div>
+
+        <!-- Parágrafo do copyright -->
+        <p class="medium">&copy; 2025 Sistema de Cadastro Individual. Todos os direitos reservados.</p>
+
+    </footer>
+</body>
+
+</html>

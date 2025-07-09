@@ -36,12 +36,28 @@
     margin: 0;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    color: var(--white);
+    color: var(--gray_text_1);
 }
 
 /* Padrão do body */
 body {
     height: 100%;
+}
+
+/* Padrão de um input */
+input {
+    padding: 0.6rem;
+    border: 1px solid var(--gray_input_border);
+    background-color: var(--gray_input);
+    color: black;
+    width: 100%;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Placeholder de um input */
+input::placeholder {
+    color: var(--gray_placeholder);
 }
 
 /* Padrão de ícones */
@@ -61,6 +77,16 @@ h1 {
     font-size: 1.2rem;
 }
 
+/* Título maior */
+.biggestTitle {
+    font-size: 1.8rem;
+}
+
+/* Texto centralizado */
+.centeredText {
+    text-align: center;
+}
+
 /* Padrão de links */
 a {
     text-decoration: none;
@@ -74,6 +100,11 @@ a {
 /* Medium para textos */
 .medium {
     font-weight: 500;
+}
+
+/* Cor de texto roxo */
+.purpleText {
+    color: var(--purple_text);
 }
 
 /* Padrão de um botão */
@@ -101,6 +132,7 @@ button {
 main {
     width: 100%;
     padding: 0 3rem;
+    min-height: 80vh;
 }
 
 /* ------------------ Header ------------------ */
@@ -114,6 +146,11 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 5px var(--gray_box_shadow);
+}
+
+/* Tudo dentro de header */
+header * {
+    color: var(--white);
 }
 
 /* Header com opacidade para quando o background do body for um gradiente  */
@@ -192,6 +229,7 @@ footer {
     background-color: var(--gray_modal_footer);
     box-shadow: 0px -2px 5px var(--gray_box_shadow);
     padding: 4rem;
+    width: 100%;
 }
 
 
@@ -283,6 +321,7 @@ footer form {
     right: 0;
     top: 0;
     border: none;
+    color: var(--white);
 }
 
 /* Hover de botão de envio do formulário form dentro de footer */
@@ -323,6 +362,11 @@ footer form {
     gap: 1rem;
 }
 
+/* Tudo dentro de index */
+.indexMain * {
+    color: var(--white);
+}
+
 /* H1 do main Index */
 .indexMain h1 {
     font-size: 1.8rem;
@@ -346,6 +390,141 @@ footer form {
 .indexMain .buttonPattern:hover {
     background-color: var(--gray_modal_background);
 }
+
+/* ------------------ Criar conta (criarconta.html) ------------------ */
+
+/* Main */
+.modalMain {
+    padding: 3rem 4rem;
+    display: flex;
+
+}
+
+/* Seções do main */
+.modalMain section {
+    padding: 5rem 3rem;
+}
+
+/* Links dentro das seções do main */
+.modalMain section a {
+    text-decoration: underline;
+}
+
+/* Lado esquerdo/de cima do modal */
+.leftSide {
+    position: relative;
+    z-index: 1;
+    background-color: var(--gray_modal_background);
+    width: 30%;
+    min-width: 23rem;
+    border-radius: 1.2rem 0 0 1.2rem;
+    justify-content: space-between;
+    gap: 4rem;
+    box-shadow: 3px 3px 3px var(--gray_box_shadow);
+
+}
+
+/* Divs filhas diretas do lado esquerdo do main */
+.leftSide>div {
+    gap: 0.3rem;
+}
+
+/* Parágrado do lado esquerdo do main */
+.leftSide p {
+    max-width: 18rem;
+}
+
+/* Lado direito do main */
+.rightSide {
+    background-color: var(--gray_modal_footer);
+    border-radius: 0 1.2rem 1.2rem 0;
+    box-shadow: 0 3px 3px var(--gray_box_shadow);
+    width: 45%;
+}
+
+/* Padrão de um campo obrigatório */
+.obrigatorio::after {
+    content: " *";
+    color: var(--red);
+}
+
+/* Formulário dentro de rightside */
+.rightSide form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input dentro de form em rightside */
+.rightSide form input {
+    /* max-width: 20rem; */
+}
+
+/* Labels dentro de form em rightside */
+.rightSide form label {
+    width: 5rem;
+}
+
+/* Divisão dentro do form */
+.rightSide form div {
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+/* Divisão da divisão de dentro do form */
+.rightSide form div div {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+}
+
+/* Padrão das mensagens de erro da validação do formulário */
+.errorMessage {
+    color: var(--red);
+    font-weight: 700;
+    font-size: 13px;
+    margin-left: 6.3rem;
+}
+
+/* Configuração dos parâmetros da senha */
+.passwordParameters {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    margin-left: 6.3rem;
+    /* margin-top: 1rem; */
+}
+
+/* Textos dos parâmetros de senha */
+.passwordParameters p,
+.passwordParameters ul li {
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* Lista não ordenada dos parâmetros de senha */
+.passwordParameters ul {
+    margin-left: 1rem;
+}
+
+/* input submit do formulário do Rightside  */
+.rightSide form input[type="submit"] {
+    border: none;
+    background-color: var(--purple_text);
+    color: var(--white);
+    font-weight: 700;
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+/* hover input submit do formulário do Rightside  */
+.rightSide form input[type="submit"]:hover {
+background-color: var(--purple_background);
+}
+
 
 @media screen and (max-width: 1300px) {
 
