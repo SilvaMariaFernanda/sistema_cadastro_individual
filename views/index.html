@@ -94,7 +94,7 @@
             <nav>
                 <!-- Seção S.C.I. footer -->
                 <div class="footerSection">
-                    <h3>S.C.I.</h3>
+                    <h3 class="bold">S.C.I.</h3>
                     <ul>
                         <li><a href="sobre.html">Sobre</a></li>
                         <li><a href="comoaplicar.html">Como aplicar</a></li>
@@ -103,7 +103,7 @@
 
                 <!-- Seção Conta footer -->
                 <div class="footerSection">
-                    <h3>Conta</h3>
+                    <h3 class="bold">Conta</h3>
                     <ul>
                         <li><a href="entrar.html">Entrar</a></li>
                         <li><a href="criarconta.html">Criar</a></li>
@@ -112,7 +112,7 @@
 
                 <!-- Seção Desenvolvimento footer -->
                 <div class="footerSection">
-                    <h3>Desenvolvimento</h3>
+                    <h3 class="bold">Desenvolvimento</h3>
                     <ul>
                         <li><a href="#">Conheça</a></li>
                         <li><a href="#">Contato</a></li>
@@ -121,7 +121,7 @@
 
                 <!-- Seção Suporte footer -->
                 <div class="footerSection">
-                    <h3>Suporte</h3>
+                    <h3 class="bold">Suporte</h3>
                     <ul>
                         <li><a href="#">E-mail</a></li>
                     </ul>
@@ -132,18 +132,34 @@
             <form action="">
 
                 <!-- Label do input -->
-                <p>Gostou do meu trabalho?</p>
-                <label for="">Envie seu e-mail para que possamos conversar melhor e iniciar uma parceria.</label>
+                <p class="bold">Gostou do meu trabalho?</p>
+                <label for="" class="bold">Envie seu e-mail para que possamos conversar melhor e iniciar uma
+                    parceria.</label>
 
                 <!-- Agrupamento do input email + submit -->
                 <div class="inputContactEmail">
+                    <!-- Input de email -->
                     <input aria-label="Email para contato" placeholder="E-mail" type="email" name="contactEmail" id="">
-                    <input type="submit" value="Enviar">
+
+                    <!-- Input submit enviar -->
+                    <input title="Enviar seu email" class="bold sendButton" type="submit" value="Enviar">
+
+                    <!-- Input submit versão de ícone (Aparece quando a tela é menor de 700px) -->
+                    <button title="Enviar seu email" class="sendButton" type="submit">
+                        <svg aria-label="Ícone de enviar" class="icon" viewBox="0 0 21 18" fill="none">
+                            <path
+                                d="M0.814453 17.1911V0.808594L20.239 8.99984L0.814453 17.1911ZM2.9997 13.9101L14.6285 8.99984L2.9997 4.0896V7.41009L9.08945 8.99984L2.9997 10.5896V13.9101Z"
+                                fill="black" />
+                        </svg>
+
+                    </button>
+
                 </div>
             </form>
         </div>
 
-        <p>&copy; 2025 Sistema de Cadastro Individual. Todos os direitos reservados.</p>
+        <!-- Parágrafo do copyright -->
+        <p class="medium">&copy; 2025 Sistema de Cadastro Individual. Todos os direitos reservados.</p>
 
     </footer>
 </body>

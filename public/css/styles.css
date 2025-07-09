@@ -18,9 +18,11 @@
 
     --blue_background: rgb(46, 121, 197);
     --blue_text: rgb(41, 112, 184);
+    --dark_blue: rgb(32, 85, 137);
 
     --purple_background: rgb(129, 100, 231);
     --purple_text: rgb(90, 67, 172);
+    --medium_purple: rgb(93, 109, 216);
 
     --red: rgb(180, 5, 5);
 
@@ -33,13 +35,23 @@
     padding: 0;
     margin: 0;
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--white);
 }
 
 /* Padrão do body */
 body {
     height: 100%;
+}
+
+/* Padrão de ícones */
+.icon {
+    height: 1rem;
+}
+
+/* Padrão dos paths dos ícones */
+.icon path {
+    fill: var(--white);
 }
 
 /* Padrão título h1 */
@@ -59,9 +71,14 @@ a {
     font-weight: 700;
 }
 
+/* Medium para textos */
+.medium {
+    font-weight: 500;
+}
+
 /* Padrão de um botão */
 .buttonPattern {
-    padding: 0.6rem;
+    padding: 0.8rem;
     border-radius: 0.5rem;
 }
 
@@ -170,10 +187,118 @@ header .summaryLandingPageLink {
 
 /* ------------------ Footer ------------------ */
 
-footer{
+/* Configuração do footer */
+footer {
     background-color: var(--gray_modal_footer);
     box-shadow: 0px -2px 5px var(--gray_box_shadow);
+    padding: 4rem;
 }
+
+
+/* Seções dentro de footer */
+.footerSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+/* Textos do footer */
+.footerSection h3,
+.footerSection ul li a,
+footer form p,
+footer form label {
+    color: var(--blue_text);
+}
+
+/* Tirar bolinhas do li */
+.footerSection ul li {
+    list-style-type: none;
+}
+
+/* Copyright do footer */
+footer>p {
+    color: var(--gray_text_2);
+    font-size: 15px;
+    text-align: center;
+}
+
+/* Div filho direto de footer (agrupamento de nav + form) e footer nav */
+footer>div,
+footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+/* Navegação de footer */
+footer nav {
+    gap: 3rem;
+}
+
+/* Agrupamento de nav + form */
+footer>div {
+    margin-bottom: 4rem;
+}
+
+/* Form dentro de footer */
+footer form {
+    text-align: center;
+    max-width: 19rem;
+    width: 100%;
+}
+
+/* Input dentro de form em footer */
+.inputContactEmail {
+    position: relative;
+    margin-top: 1rem;
+}
+
+/* Input envio de e-mail dentro de footer */
+.inputContactEmail input {
+    padding: 0.6rem;
+    border: 2px solid var(--blue_text);
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+/* Cor do texto dentro do input em footer */
+.inputContactEmail input[type="email"] {
+    color: black;
+}
+
+/* Cor do placeholder dentro do input em footer */
+.inputContactEmail input[type="email"]::placeholder {
+    color: var(--blue_text);
+}
+
+/* Botão de envio do formulário form dentro de footer */
+.inputContactEmail input[type="submit"],
+.inputContactEmail button {
+    background-color: var(--blue_text);
+    font-size: 1rem;
+    width: 5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+}
+
+/* Hover de botão de envio do formulário form dentro de footer */
+.inputContactEmail input[type="submit"]:hover,
+.inputContactEmail button:hover {
+    background-color: var(--dark_blue);
+    cursor: pointer;
+}
+
+/* Botão com ícone de enviar */
+.inputContactEmail button {
+    height: 100%;
+    border-radius: 0.5rem;
+    width: 2.5rem;
+    display: none;
+}
+
 
 /* ------------------ Landing page (index.html) ------------------ */
 
@@ -192,28 +317,48 @@ footer{
 /* Main do Index */
 .indexMain {
     height: 80vh;
-    justify-content: flex-start;
-    padding-top: 7rem;
+    justify-content: center;
     text-align: center;
     gap: 1rem;
 }
 
 /* H1 do main Index */
-.indexMain h1{
+.indexMain h1 {
     font-size: 1.8rem;
 }
 
 /* P do main Index */
-.indexMain p{
+.indexMain p {
     font-size: 1.2rem;
     max-width: 45rem;
 }
 
 /* Link redirecionamento para Criar conta */
-.indexMain .buttonPattern{
-    font-weight: 700;    
-    color: var(--purple_background);
+.indexMain .buttonPattern {
+    font-weight: 700;
+    color: var(--medium_purple);
     background-color: var(--white);
+    transition: 0.5s;
+}
+
+/* Hover do link redirecionamento para Criar conta */
+.indexMain .buttonPattern:hover {
+    background-color: var(--gray_modal_background);
+}
+
+@media screen and (max-width: 1300px) {
+
+    /* Agrupamento de nav + form */
+    footer>div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Div filho direto de footer (agrupamento de nav + form) e footer nav */
+    footer nav {
+        justify-content: center;
+        gap: 4rem;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -226,6 +371,26 @@ footer{
     /* Menu hamburguer */
     header button {
         display: block;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    /* footer nav */
+    footer nav {
+        flex-direction: column;
+    }
+
+    /* Botão com ícone de enviar */
+    .inputContactEmail button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Botão de envio do formulário form dentro de footer */
+    .inputContactEmail input[type="submit"] {
+        display: none;
     }
 }
 
@@ -245,7 +410,8 @@ footer{
 @media screen and (max-width: 250px) {
 
     /* Padrão do header, main */
-    header, main {
+    header,
+    main {
         padding: 0 1rem;
     }
 
