@@ -131,6 +131,7 @@ button {
 /* Padrão do main */
 main {
     width: 100%;
+    height: 100%;
     padding: 0 3rem;
     min-height: 80vh;
 }
@@ -397,12 +398,12 @@ footer form {
 .modalMain {
     padding: 3rem 4rem;
     display: flex;
-
 }
 
 /* Seções do main */
 .modalMain section {
     padding: 5rem 3rem;
+    min-height: 39.5rem;
 }
 
 /* Links dentro das seções do main */
@@ -421,7 +422,7 @@ footer form {
     justify-content: space-between;
     gap: 4rem;
     box-shadow: 3px 3px 3px var(--gray_box_shadow);
-
+    height: 100%;
 }
 
 /* Divs filhas diretas do lado esquerdo do main */
@@ -434,16 +435,23 @@ footer form {
     max-width: 18rem;
 }
 
+/* Hover do link dentro de leftside */
+.leftSide a:hover {
+    color: var(--purple_background);
+}
+
 /* Lado direito do main */
 .rightSide {
     background-color: var(--gray_modal_footer);
     border-radius: 0 1.2rem 1.2rem 0;
     box-shadow: 0 3px 3px var(--gray_box_shadow);
     width: 45%;
+    min-width: 33rem;
+    /* display: none; */
 }
 
 /* Padrão de um campo obrigatório */
-.obrigatorio::after {
+.required::after {
     content: " *";
     color: var(--red);
 }
@@ -454,11 +462,6 @@ footer form {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-/* Input dentro de form em rightside */
-.rightSide form input {
-    /* max-width: 20rem; */
 }
 
 /* Labels dentro de form em rightside */
@@ -486,6 +489,7 @@ footer form {
     font-weight: 700;
     font-size: 13px;
     margin-left: 6.3rem;
+    display: none;
 }
 
 /* Configuração dos parâmetros da senha */
@@ -494,7 +498,7 @@ footer form {
     align-items: flex-start !important;
     gap: 0.5rem !important;
     margin-left: 6.3rem;
-    /* margin-top: 1rem; */
+    margin-top: 0.6rem;
 }
 
 /* Textos dos parâmetros de senha */
@@ -512,7 +516,7 @@ footer form {
 /* input submit do formulário do Rightside  */
 .rightSide form input[type="submit"] {
     border: none;
-    background-color: var(--purple_text);
+    background-color: var(--gray_text_1);
     color: var(--white);
     font-weight: 700;
     width: fit-content;
@@ -520,11 +524,45 @@ footer form {
     transition: all 0.5s;
 }
 
-/* hover input submit do formulário do Rightside  */
+/* hover input submit do formulário do Rightside 
 .rightSide form input[type="submit"]:hover {
 background-color: var(--purple_background);
+} */
+
+/* Agrupamento do input + mensagem de erro em formulários */
+.inputDiv {
+    margin-bottom: 1rem !important;
 }
 
+/* Agrupamento do input + botão de visibilidade */
+.inputEyeVisibility {
+    width: 100%;
+    position: relative;
+}
+
+/* Botão dentro do agrupamento do input + botão de visibilidade  */
+.inputEyeVisibility button {
+    height: 100%;
+    width: 1.5rem;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0.6rem;
+    height: 1.5rem;
+}
+
+/* Ícone dentro do botão */
+.inputEyeVisibility button .icon {
+    height: 100%;
+}
+
+/* Path do ícone dentro do botão */
+.inputEyeVisibility button .icon path {
+    fill: var(--gray_text_1);
+}
 
 @media screen and (max-width: 1300px) {
 
@@ -539,6 +577,45 @@ background-color: var(--purple_background);
         justify-content: center;
         gap: 4rem;
     }
+}
+
+@media screen and (max-width: 1100px) {
+
+    /* Main */
+    .modalMain {
+        flex-direction: column;
+    }
+
+    /* Lado esquerdo/de cima do modal */
+    .leftSide {
+        width: 90%;
+        min-width: 0;
+        border-radius: 1.2rem 1.2rem 0 0;
+        gap: 1rem;
+        box-shadow: 0px 3px 3px var(--gray_box_shadow);
+        height: 30%;
+    }
+
+    /* Seções do main */
+    .modalMain section {
+        padding: 3rem;
+        min-height: 0;
+    }
+
+    /* Parágrado do lado esquerdo do main */
+    .leftSide p {
+        max-width: none;
+    }
+
+    /* Lado direito do main */
+    .rightSide {
+        background-color: var(--gray_modal_footer);
+        border-radius: 0 0 1.2rem 1.2rem;
+        box-shadow: 0 3px 3px var(--gray_box_shadow);
+        width: 90%;
+        min-width: 0;
+    }
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -556,6 +633,11 @@ background-color: var(--purple_background);
 
 @media screen and (max-width: 700px) {
 
+    /* Padrão do main */
+    main {
+        padding: 2rem 2rem !important;
+    }
+
     /* footer nav */
     footer nav {
         flex-direction: column;
@@ -572,9 +654,39 @@ background-color: var(--purple_background);
     .inputContactEmail input[type="submit"] {
         display: none;
     }
+
+    /* Divisão da divisão de dentro do form */
+    .rightSide form div div {
+        display: flex;
+        gap: 0.2rem;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Labels dentro de form em rightside */
+    .rightSide form label {
+        width: fit-content;
+    }
+
+    /* Configuração dos parâmetros da senha + Padrão das mensagens de erro da validação do formulário */
+    .passwordParameters,
+    .errorMessage {
+        margin-left: 0.5rem;
+    }
+
+    /* Agrupamento do input + botão de visibilidade */
+    .inputEyeVisibility {
+        justify-content: center !important;
+    }
 }
 
 @media screen and (max-width: 500px) {
+
+    /* Padrão do main */
+    main {
+        padding: 1rem 1rem !important;
+    }
 
     /* Link para a landing page no header */
     .landingPageLink {
@@ -585,6 +697,22 @@ background-color: var(--purple_background);
     header .summaryLandingPageLink {
         display: inline-flex;
     }
+
+    /* Lado esquerdo/de cima do modal e direito/de baixo */
+    .leftSide,
+    .rightSide {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    /* Seções do main */
+    .modalMain section {
+        padding: 3rem 1.5rem 3rem 1.5rem;
+        min-height: 0;
+    }
 }
 
 @media screen and (max-width: 250px) {
@@ -593,6 +721,10 @@ background-color: var(--purple_background);
     header,
     main {
         padding: 0 1rem;
+    }
+
+    main {
+        padding: 0 0.3rem !important;
     }
 
 }
