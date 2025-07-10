@@ -318,6 +318,7 @@ footer form {
     background-color: var(--blue_text);
     font-size: 1rem;
     width: 5rem;
+    height: 100%;
     position: absolute;
     right: 0;
     top: 0;
