@@ -102,9 +102,24 @@ a {
     font-weight: 500;
 }
 
+/* Item alinhado a esquerda */
+.leftAlign{
+    align-content: flex-start;
+}
+
 /* Cor de texto roxo */
 .purpleText {
     color: var(--purple_text);
+}
+
+/* Cor de texto azul */
+.blueText{
+    color: var(--blue_text);
+}
+
+/* hover azul */
+.blueHover:hover{
+    color: var(--dark_blue) !important;
 }
 
 /* Padrão de um botão */
@@ -472,7 +487,6 @@ footer form {
 
 /* Divisão dentro do form */
 .rightSide form div {
-    margin-bottom: 0.5rem;
     width: 100%;
 }
 
@@ -533,6 +547,12 @@ background-color: var(--purple_background);
 /* Agrupamento do input + mensagem de erro em formulários */
 .inputDiv {
     margin-bottom: 1rem !important;
+}
+
+/* Link dentro de inputdiv */
+.linkInputDiv{
+    margin-top: 1rem !important;
+    margin-left: 6.3rem;
 }
 
 /* Agrupamento do input + botão de visibilidade */
@@ -672,7 +692,7 @@ background-color: var(--purple_background);
 
     /* Configuração dos parâmetros da senha + Padrão das mensagens de erro da validação do formulário */
     .passwordParameters,
-    .errorMessage {
+    .errorMessage, .linkInputDiv {
         margin-left: 0.5rem;
     }
 
