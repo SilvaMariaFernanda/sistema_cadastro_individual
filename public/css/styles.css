@@ -42,6 +42,7 @@
 /* Padrão do body */
 body {
     height: 100%;
+    background-color: var(--gray_background);
 }
 
 /* Padrão de um input */
@@ -103,7 +104,7 @@ a {
 }
 
 /* Item alinhado a esquerda */
-.leftAlign{
+.leftAlign {
     align-content: flex-start;
 }
 
@@ -113,12 +114,17 @@ a {
 }
 
 /* Cor de texto azul */
-.blueText{
+.blueText {
     color: var(--blue_text);
 }
 
+/* Cor de texto vermelho */
+.redText {
+    color: var(--red);
+}
+
 /* hover azul */
-.blueHover:hover{
+.blueHover:hover {
     color: var(--dark_blue) !important;
 }
 
@@ -149,6 +155,8 @@ main {
     height: 100%;
     padding: 0 3rem;
     min-height: 80vh;
+    position: relative;
+
 }
 
 /* ------------------ Header ------------------ */
@@ -157,6 +165,7 @@ main {
 header {
     height: 5rem;
     width: 100%;
+    background-color: var(--gray_header);
     padding: 0 3rem;
     display: flex;
     justify-content: space-between;
@@ -164,8 +173,12 @@ header {
     box-shadow: 0px 2px 5px var(--gray_box_shadow);
 }
 
-/* Tudo dentro de header */
 header * {
+    color: var(--blue_text);
+}
+
+/* Tudo dentro de header com fundo degradê */
+.backgroundOpacityHeader * {
     color: var(--white);
 }
 
@@ -198,9 +211,16 @@ header * {
     height: 1.2rem;
 }
 
-/* Cor do home ícon */
-.landingPageLink svg path {
+/* Cor do home ícon com fundo degradê */
+.backgroundOpacityHeader .landingPageLink svg path,
+.backgroundOpacityHeader .summaryLandingPageLink svg path {
     fill: var(--white);
+}
+
+/* Cor padrão do home icon */
+.landingPageLink svg path,
+.summaryLandingPageLink svg path {
+    fill: var(--blue_text);
 }
 
 /* Padrão do NAV do header */
@@ -217,8 +237,14 @@ header a {
 }
 
 /* Hover dos links dentro do header */
-header a:hover {
+
+.backgroundOpacityHeader a:hover {
     background-color: var(--gray_header);
+}
+
+/* Hover dos links dentro do header */
+header a:hover {
+    background-color: var(--gray_modal_footer);
 }
 
 /* buttonPattern dentro de nav do header */
@@ -236,6 +262,58 @@ header button {
 /* Titulo/link landing page resumido */
 header .summaryLandingPageLink {
     display: none;
+}
+
+.backgroundProfileButton{
+    background-color: var(--dark_blue);
+    height: 2.8rem;
+    min-height: 2.8rem;
+    width: 2.8rem;
+    min-width: 2.8rem;
+    border-radius: 50%;
+    
+}
+
+/* Botão de perfil do usuário */
+.profileButton {
+    background-color: var(--blue_text);
+    color: var(--white);
+    height: 2.5rem;
+    width: 2.5rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    display: flex;
+}
+
+/* Menu de configurações do perfil */
+.profileMenu {
+    background-color: var(--gray_modal_footer);
+    padding: 2rem 2rem;
+    max-width: 11rem;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 3px var(--gray_box_shadow);
+    gap: 0.6rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    display: none;
+}
+
+/* Linhas dentro da lista */
+.profileMenu li {
+    list-style: none;
+}
+
+/* Botões dentro das linhas da lista */
+.profileMenu li button {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
 }
 
 /* ------------------ Footer ------------------ */
@@ -529,7 +607,7 @@ footer form {
 }
 
 /* input submit do formulário do Rightside  */
-.rightSide form input[type="submit"] {
+form input[type="submit"] {
     border: none;
     background-color: var(--gray_text_1);
     color: var(--white);
@@ -550,7 +628,7 @@ background-color: var(--purple_background);
 }
 
 /* Link dentro de inputdiv */
-.linkInputDiv{
+.linkInputDiv {
     margin-top: 1rem !important;
     margin-left: 6.3rem;
 }
@@ -584,6 +662,50 @@ background-color: var(--purple_background);
 .inputEyeVisibility button .icon path {
     fill: var(--gray_text_1);
 }
+
+/* ------------------ Modal (modal.html) ------------------ */
+
+/* Padrão do modal */
+.modalSection {
+    background-color: var(--gray_modal_footer);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem !important;
+    min-height: 0 !important;
+    max-width: 30rem;
+    border-radius: 1.5rem;
+}
+
+/* Padrão do botão de voltar */
+.backButton {
+    background-color: transparent;
+    color: var(--blue_text);
+    border: none;
+    display: inline-flex;
+    gap: 0.5rem;
+}
+
+/* Cor do ícone da flecha */
+.backButton .icon path {
+    fill: var(--blue_text);
+}
+
+/* Divisão de conteúdo dentro do modal */
+.modalContent {
+    padding: 2rem;
+    gap: 0.7rem;
+}
+
+/* Formulário dentro de modal */
+.modalContent form {
+    gap: 0.7rem;
+}
+
+/* Timer dentro do modal */
+.modalTimer {
+    font-size: 30px;
+}
+
 
 @media screen and (max-width: 1300px) {
 
@@ -692,7 +814,8 @@ background-color: var(--purple_background);
 
     /* Configuração dos parâmetros da senha + Padrão das mensagens de erro da validação do formulário */
     .passwordParameters,
-    .errorMessage, .linkInputDiv {
+    .errorMessage,
+    .linkInputDiv {
         margin-left: 0.5rem;
     }
 
@@ -725,6 +848,11 @@ background-color: var(--purple_background);
         width: 100%;
     }
 
+    /* Padrão do modal */
+    .modalContent {
+        padding: 2rem 1rem !important;
+    }
+
 }
 
 @media screen and (max-width: 400px) {
@@ -733,6 +861,11 @@ background-color: var(--purple_background);
     .modalMain section {
         padding: 3rem 1.5rem 3rem 1.5rem;
         min-height: 0;
+    }
+
+    /* Padrão do modal */
+    .modalContent {
+        padding: 2rem 0 !important;
     }
 }
 
