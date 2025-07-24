@@ -264,30 +264,30 @@ header .summaryLandingPageLink {
     display: none;
 }
 
-.backgroundProfileButton{
-    background-color: var(--dark_blue);
-    height: 2.8rem;
-    min-height: 2.8rem;
-    width: 2.8rem;
-    min-width: 2.8rem;
-    border-radius: 50%;
-    
-}
-
 /* Botão de perfil do usuário */
 .profileButton {
-    background-color: var(--blue_text);
-    color: var(--white);
     height: 2.5rem;
     width: 2.5rem;
     min-width: 2.5rem;
     min-height: 2.5rem;
+    transition: all 0.3s;
+}
+
+/* Padrão da foto de perfil do usuário */
+.profilePhotoDefault {
+    background-color: var(--blue_text);
+    color: var(--white);
     border-radius: 50%;
     font-size: 1.8rem;
     align-items: center;
     justify-content: center;
     font-weight: 300;
     display: flex;
+}
+
+/* Hover do .profileButton */
+.profileButton:hover {
+    transform: scale(110%);
 }
 
 /* Menu de configurações do perfil */
@@ -300,8 +300,8 @@ header .summaryLandingPageLink {
     gap: 0.6rem;
     position: absolute;
     top: 1rem;
-    right: 2rem;
-    display: none;
+    right: 3rem;
+    display: none !important;
 }
 
 /* Linhas dentro da lista */
@@ -706,6 +706,42 @@ background-color: var(--purple_background);
     font-size: 30px;
 }
 
+/* ------------------ Perfil do usuário (perfil.html) ------------------ */
+
+/* Foto dentro de perfil do usuário */
+.profilePhoto{
+    height: 13rem;
+    width: 13rem;
+    min-width: 13rem;
+    min-height: 13rem;
+    font-size: 12rem;
+}
+
+/* Padrão dos botões */
+.defaultButton{
+    border: none;
+    background-color: var(--blue_text);
+    color: var(--white);
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+}
+
+/* Hover do padrão dos botões */
+.defaultButton:hover{
+    background-color: var(--blue_background);
+}
+
+/* Seção de apresentação do perfil */
+.profileSection{
+    gap: 1rem;
+}
+
+/* Agrupamento das informações do perfil */
+.profileInfo{
+    gap: 0.3rem;
+}
 
 @media screen and (max-width: 1300px) {
 
@@ -880,5 +916,11 @@ background-color: var(--purple_background);
     main {
         padding: 0 0.3rem !important;
     }
+
+    /* Menu de configurações do perfil */
+    .profileMenu {
+        right: 1rem;
+    }
+
 
 }

@@ -54,13 +54,12 @@
         </a>
 
         <!-- Botão de acesso as configurações do seu perfil (TextContent definido pelo js)-->
-        <div class="backgroundProfileButton centralizedItem">
-            <button type="button" class="profileButton">D</button>
-        </div>
+        <button type="button" class="profileButton profilePhotoDefault">D</button>
     </header>
     <!-- Conteúdo principal -->
-    <main class="modalMain centralizedItem">
-        <!-- Menu ao apertar botão do perfil -->
+    <main class=" centralizedItem">
+
+        <!-- Menu ao apertar botão do perfil no header -->
         <ul class="profileMenu centralizedItem columnItem">
 
             <!-- Botão para editar perfil -->
@@ -72,6 +71,27 @@
             <!-- Botão para apagar a conta -->
             <li><button type="button" class="redText">Apagar conta</button></li>
         </ul>
+
+        <!-- Seção de apresentação do perfil -->
+        <section class="centralizedItem columnItem profileSection">
+            <!-- Foto de perfil do usuário -->
+            <div class="profilePhoto profilePhotoDefault">
+                D
+            </div>
+
+            <!-- Agrupamento das informações do perfil -->
+            <div class="profileInfo centralizedItem columnItem">
+                <!-- Nome do usuário -->
+                <h1>Nome do usuário</h1>
+
+                <!-- E-mail do usuário -->
+                <p>emailexemplo@dominio.com</p>
+
+            </div>
+            
+            <!-- Botão de editar perfil -->
+            <button type="button" class="defaultButton">Editar Perfil</button>
+        </section>
     </main>
 
     <!-- Footer padrão -->
@@ -86,7 +106,6 @@
                     <h3 class="bold">S.C.I.</h3>
                     <ul>
                         <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="comoaplicar.html">Como aplicar</a></li>
                     </ul>
                 </div>
 
