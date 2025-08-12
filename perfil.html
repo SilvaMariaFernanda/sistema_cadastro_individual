@@ -57,7 +57,7 @@
         <button type="button" class="profileButton profilePhotoDefault">D</button>
     </header>
     <!-- Conteúdo principal -->
-    <main class=" centralizedItem">
+    <main class="profileMain centralizedItem">
 
         <!-- Menu ao apertar botão do perfil no header -->
         <ul class="profileMenu centralizedItem columnItem">
@@ -88,9 +88,42 @@
                 <p>emailexemplo@dominio.com</p>
 
             </div>
-            
+
             <!-- Botão de editar perfil -->
             <button type="button" class="defaultButton">Editar Perfil</button>
+        </section>
+
+        <!-- Seção de edição de perfil -->
+        <section class="centralizedItem columnItem editProfileSection">
+            <!-- Agrupamento de foto de perfil + botão de edição -->
+            <div class="buttonGrouping photoEdit">
+                <!-- Foto de perfil do usuário -->
+                <div class="profilePhoto profilePhotoDefault">
+                    D
+                </div>
+
+                <!-- Botão para editar ou adicionar foto de perfil -->
+                <button aria-label="Editar ou adicionar foto de perfil" type="button"
+                    class="iconButton roundButton centralizedItem">
+                    <!-- Ícone de camera -->
+                    <svg class="icon" viewBox="0 0 167 150" fill="none">
+                        <path
+                            d="M83.3333 120.833C93.75 120.833 102.604 117.188 109.896 109.896C117.188 102.604 120.833 93.75 120.833 83.3333C120.833 72.9167 117.188 64.0625 109.896 56.7708C102.604 49.4792 93.75 45.8333 83.3333 45.8333C72.9167 45.8333 64.0625 49.4792 56.7708 56.7708C49.4792 64.0625 45.8333 72.9167 45.8333 83.3333C45.8333 93.75 49.4792 102.604 56.7708 109.896C64.0625 117.188 72.9167 120.833 83.3333 120.833ZM83.3333 104.167C77.5 104.167 72.5695 102.153 68.5417 98.125C64.5139 94.0972 62.5 89.1667 62.5 83.3333C62.5 77.5 64.5139 72.5694 68.5417 68.5417C72.5695 64.5139 77.5 62.5 83.3333 62.5C89.1667 62.5 94.0972 64.5139 98.125 68.5417C102.153 72.5694 104.167 77.5 104.167 83.3333C104.167 89.1667 102.153 94.0972 98.125 98.125C94.0972 102.153 89.1667 104.167 83.3333 104.167ZM16.6667 150C12.0833 150 8.15972 148.368 4.89583 145.104C1.63194 141.84 0 137.917 0 133.333V33.3333C0 28.75 1.63194 24.8264 4.89583 21.5625C8.15972 18.2986 12.0833 16.6667 16.6667 16.6667H42.9167L58.3333 0H108.333L123.75 16.6667H150C154.583 16.6667 158.507 18.2986 161.771 21.5625C165.035 24.8264 166.667 28.75 166.667 33.3333V133.333C166.667 137.917 165.035 141.84 161.771 145.104C158.507 148.368 154.583 150 150 150H16.6667ZM16.6667 133.333H150V33.3333H116.25L101.042 16.6667H65.625L50.4167 33.3333H16.6667V133.333Z"
+                            fill="#666666" />
+                    </svg>
+
+                </button>
+            </div>
+
+            <!-- Formulário de edição de dados do usuário -->
+            <form class="profileEditForm" action="">
+
+                <!-- Agrupamento do label de nome + campo input -->
+                <div class="fieldGroup centralizedItem">
+                    <label for="">Nome:</label>
+                    <input aria-label="Seu nome de usuário" type="text" name="" id="">
+                </div>
+            </form>
         </section>
     </main>
 

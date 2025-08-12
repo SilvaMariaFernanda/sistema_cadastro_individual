@@ -134,6 +134,33 @@ a {
     border-radius: 0.5rem;
 }
 
+/* Padrão de um botão redondo */
+.roundButton {
+    background-color: var(--white);
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    box-shadow: 0px 2px 5px var(--gray_box_shadow);
+    transition: 0.1s;
+}
+
+/* Hover do botão redondo */
+.roundButton:hover {
+    transform: scale(110%);
+}
+
+/* Ícone dentro do botão redondo */
+.roundButton .icon {
+    height: 1.2rem;
+}
+
+/* Padrão do path do ícone dentro do botão redondo */
+.roundButton .icon path {
+    fill: var(--gray_text_1);
+}
+
 /* Padrão de todos os SVGs */
 svg {
     height: 1.3rem;
@@ -708,8 +735,13 @@ background-color: var(--purple_background);
 
 /* ------------------ Perfil do usuário (perfil.html) ------------------ */
 
+
+.profileMain section{
+    width: 100%;
+}
+
 /* Foto dentro de perfil do usuário */
-.profilePhoto{
+.profilePhoto {
     height: 13rem;
     width: 13rem;
     min-width: 13rem;
@@ -718,7 +750,7 @@ background-color: var(--purple_background);
 }
 
 /* Padrão dos botões */
-.defaultButton{
+.defaultButton {
     border: none;
     background-color: var(--blue_text);
     color: var(--white);
@@ -729,18 +761,43 @@ background-color: var(--purple_background);
 }
 
 /* Hover do padrão dos botões */
-.defaultButton:hover{
+.defaultButton:hover {
     background-color: var(--blue_background);
 }
 
 /* Seção de apresentação do perfil */
-.profileSection{
+.profileSection {
     gap: 1rem;
+    display: none;
 }
 
 /* Agrupamento das informações do perfil */
-.profileInfo{
+.profileInfo {
     gap: 0.3rem;
+}
+
+/* Div de edição de foto de perfil */
+.photoEdit {
+    display: flex;
+    position: relative;
+}
+
+/* Botão redondo dentro de .photoEdit */
+.photoEdit .roundButton {
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+}
+
+/* Formulário de edição de perfil */
+.profileEditForm{
+    width: 100%;
+}
+
+/* Agrupamento do campo com a label */
+.fieldGroup {
+    display: flex;
+    gap: 2rem;
 }
 
 @media screen and (max-width: 1300px) {
